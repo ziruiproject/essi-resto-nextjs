@@ -1,6 +1,6 @@
 export interface Food {
     id : number,
-    name : String,
-    description : String,
+    name : string,
+    description : string,
     price : number,
 }
