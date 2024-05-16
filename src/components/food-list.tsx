@@ -1,11 +1,13 @@
 import { Food } from "@/models/food";
+import { FoodImage } from "@/models/food-images";
+import FoodCard from "./food-card";
 
-export default function FoodList(props: { foods: Food[] }) {
-  const { foods } = props;
+export default function FoodList(props: { foodImage: FoodImage[] }) {
+  const { foodImage } = props;
   return (
-    <section>
-      {foods?.map((food: Food) => {
-        return <span key={food.id}>{food.name}</span>;
+    <section className="gap-4 grid grid-cols-2">
+      {foodImage?.map((food: FoodImage) => {
+        return <FoodCard key={food.id} food={food}></FoodCard>;
       })}
     </section>
   );
