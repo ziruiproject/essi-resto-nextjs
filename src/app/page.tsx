@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Food } from "../models/food";
 import { Category } from "../models/category";
 import FoodList from "@/components/food-list";
 import { FoodImage } from "@/models/food-images";
-import Image from "next/image";
 
 export default function Home() {
   const [foods, setFoods] = useState<FoodImage[]>([]);
